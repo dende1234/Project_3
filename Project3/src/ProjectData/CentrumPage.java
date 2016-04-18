@@ -11,8 +11,7 @@ public class CentrumPage extends JFrame{
 	private static Con_sql con_sql;
 	
 	public CentrumPage(){
-		createPage();
-		
+		createPage();	
 	}
 
 	public static void main(String[] args) {
