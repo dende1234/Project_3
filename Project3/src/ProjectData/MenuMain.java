@@ -68,7 +68,8 @@ public class MenuMain extends JFrame {
 		okButton.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				frame.dispose();
-				NextPage frame = new NextPage();
+				NextPage frame = null;
+				frame = new NextPage();
 				frame.setVisible(true);
 			}
 			

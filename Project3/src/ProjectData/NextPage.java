@@ -63,15 +63,13 @@ public class NextPage extends JFrame {
 		
 		open.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				frame.dispose();
-				List<Integer> years = new ArrayList<Integer>();
-				//see the visualizationpage
+				CentrumPage frame = null;
 				try {
-					years = con_sql.query_1();
+					frame = new CentrumPage();
 				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				CentrumPage frame = new CentrumPage();
 				frame.setVisible(true);
 			}
 		});
