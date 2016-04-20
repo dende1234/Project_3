@@ -22,6 +22,7 @@ public class MenuMain extends JFrame {
 		
 	}
 	
+	
 	public void prepareGui(){
 		//Sets up the main menu frame.
 		JFrame frame = new JFrame("Project 3");
