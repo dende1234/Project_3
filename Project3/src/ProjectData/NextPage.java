@@ -27,7 +27,7 @@ public class NextPage extends JFrame {
 		//Sets up the frame
 		JFrame frame = new JFrame("Map");
 		try{
-			frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("C:/Users/Danny Hoogeveen/Pictures/rotterdam_wijken.png")))));
+			frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("C:/Users/Danny Hoogeveen/Pictures/Kaart.png")))));
 		}catch(IOException e){
 			System.out.println("Image doesn't exist");
 		}
@@ -47,8 +47,18 @@ public class NextPage extends JFrame {
 		
 		JButton back = new JButton("Back to Main Menu");
 		back.setSize(150, 50);
-		back.setLocation(1050, 800);
+		back.setLocation(780, 650);
 		frame.add(back);
+		
+		JButton p_b = new JButton("Policestations");
+		p_b.setSize(150, 50);
+		p_b.setLocation(780, 500);
+		frame.add(p_b);
+		
+		JButton mon = new JButton("Monuments");
+		mon.setSize(150, 50);
+		mon.setLocation(780, 440);
+		frame.add(mon);
 		
 		//button actions.
 		back.addActionListener(new ActionListener(){
@@ -66,6 +76,19 @@ public class NextPage extends JFrame {
 				CentrumPage frame = null;
 				try {
 					frame = new CentrumPage();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				frame.setVisible(true);
+			}
+		});
+		
+		p_b.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				P_B frame = null;
+				try {
+					frame = new P_B();
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
