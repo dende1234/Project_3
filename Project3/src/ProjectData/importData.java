@@ -39,25 +39,12 @@ public class importData extends MenuMain{
 		}else{
 			System.out.println("Failed to make connection!");
 		}
-		try{
-			query_1();
-		}catch(SQLException e){
-			System.out.println(e);
-		}
+		
 		// Runs the main menu
 		MenuMain.main(args);		
 		
 		}
-	public static void query_1() throws SQLException{
-		Statement statement = connection.createStatement();
-		String query = "select * from monument";
-		ResultSet rs = statement.executeQuery(query);
-		System.out.println(rs);
-		while(rs.next()){
-			System.out.println(rs.getString("mon_onthulling"));
-			
-		}
-	}
+
 
 }
 

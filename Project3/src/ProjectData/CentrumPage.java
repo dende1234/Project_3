@@ -83,7 +83,7 @@ public class CentrumPage extends JFrame{
 			int width = 900;
 			int height = 370;
 			
-			JFrame frame = new JFrame("PieChart");
+			JFrame frame = this;
 			
 			BufferedImage image = chart.createBufferedImage(1080, 780);
 			JLabel label = new JLabel();

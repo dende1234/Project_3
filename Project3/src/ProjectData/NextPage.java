@@ -8,24 +8,22 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.*;
 
-public class NextPage extends JFrame {
-	private static Con_sql con_sql;
-	
+public class NextPage extends JFrame {	
 	
 	public NextPage(){
 		//calls the page
 		makePage();
-		con_sql = new Con_sql();
 	}
 	
 	public static void main(String[] args){
-		NextPage nextPage = new NextPage();
+		//NextPage nextPage = new NextPage();
 		
 	}
 	
 	public void makePage(){
+		JFrame frame = this;
 		//Sets up the frame
-		JFrame frame = new JFrame("Map");
+		//JFrame frame = new JFrame("Map");
 		try{
 			frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("C:/Users/Danny Hoogeveen/Pictures/Kaart.png")))));
 		}catch(IOException e){
@@ -66,7 +64,7 @@ public class NextPage extends JFrame {
 				frame.dispose();
 				//get back to main menu
 				MenuMain frame = new MenuMain();
-				frame.setVisible(true);
+				//frame.setVisible(true);
 				
 			}
 		});
@@ -80,7 +78,7 @@ public class NextPage extends JFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				frame.setVisible(true);
+				//frame.setVisible(true);
 			}
 		});
 		
@@ -93,7 +91,20 @@ public class NextPage extends JFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				frame.setVisible(true);
+				//frame.setVisible(true);
+			}
+		});
+		
+		mon.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				Monuments frame = null;
+				try {
+					frame = new Monuments();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				//frame.setVisible(true);
 			}
 		});
 		
