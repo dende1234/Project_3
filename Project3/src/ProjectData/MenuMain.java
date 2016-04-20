@@ -19,6 +19,7 @@ public class MenuMain extends JFrame {
 
 	public static void main(String[] args) {
 		MenuMain menuMain = new MenuMain();
+		
 	}
 	
 	public void prepareGui(){
