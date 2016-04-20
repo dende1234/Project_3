@@ -67,12 +67,12 @@ public class P_B extends JFrame {
 			}
 			
 			Statement statement = connection.createStatement();
-			ResultSet resultSet = statement.executeQuery("select * from monument");
+			ResultSet resultSet = statement.executeQuery("select count(pb_code), Region from pb_adres group by Region");
 			DefaultPieDataset dataset = new DefaultPieDataset();
 			while(resultSet.next()){
 				dataset.setValue(
-						resultSet.getString("mon_naam"),
-						Double.parseDouble(resultSet.getString("mon_onthulling")));
+						resultSet.getString("region"),
+						Double.parseDouble(resultSet.getString(1)));
 			}
 			JFreeChart chart = ChartFactory.createPieChart(
 					"Policestations in Rotterdam",
